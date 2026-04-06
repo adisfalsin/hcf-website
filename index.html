@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hammersmith Christian Fellowship — A Christ-centred community in West London. Join us Sundays at 10:30am at Ravenscourt Road, W6.">
+<meta name="keywords" content="church hammersmith, christian fellowship west london, baptist church w6, churches in hammersmith">
+<meta property="og:title" content="Hammersmith Christian Fellowship">
+<meta property="og:description" content="A warm, welcoming church family in the heart of Hammersmith. All are welcome.">
+<meta property="og:type" content="website">
+<title>Hammersmith Christian Fellowship | West London Church</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* =============================================
+   RESET & ROOT
+   ============================================= */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --navy:       #0d1f3c;
+  --navy-mid:   #162d52;
+  --gold:       #c9a84c;
+  --gold-light: #e8d5a3;
+  --cream:      #faf8f3;
+  --stone:      #f0ece0;
+  --text:       #1a1a2e;
+  --muted:      #6b6b7b;
+  --white:      #ffffff;
+  --nav-h:      72px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =============================================
+   TYPOGRAPHY HELPERS
+   ============================================= */
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  line-height: 1.15;
+}
+
+h1 { font-size: clamp(2.8rem, 6vw, 5rem); color: var(--white); }
+h2 { font-size: clamp(2rem, 4vw, 3rem);   color: var(--navy); margin-bottom: 1rem; }
+h2 em, h1 em { font-style: italic; }
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+.tag-line {
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+.tag-text {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 400;
+}
+.section-lead {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.8;
+  font-weight: 300;
+  max-width: 560px;
+  margin-bottom: 2.5rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 14px 32px;
+  border-radius: 2px;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: 2px solid var(--gold);
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+}
+.btn-primary:hover {
+  background: transparent;
+  color: var(--gold);
+}
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 2px;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 400;
+  border: 1px solid rgba(255,255,255,0.35);
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* =============================================
+   NAVIGATION
+   ============================================= */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  height: var(--nav-h);
+  background: rgba(13, 31, 60, 0.97);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+/* Cross icon */
+.nav-cross {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  flex-shrink: 0;
+}
+.nav-cross::before,
+.nav-cross::after {
+  content: '';
+  position: absolute;
+  background: var(--gold);
+  border-radius: 2px;
+}
+.nav-cross::before { width: 4px; height: 28px; left: 12px; top: 0; }
+.nav-cross::after  { width: 28px; height: 4px; left: 0;  top: 12px; }
+
+.nav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+.nav-name span {
+  display: block;
+  font-size: 0.62rem;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--gold-light);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-top: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-links a {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--gold); }
+
+.nav-cta {
+  background: var(--gold);
+  color: var(--navy);
+  padding: 8px 20px;
+  border-radius: 2px;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.nav-cta:hover { background: var(--gold-light); }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: var(--nav-h);
+  left: 0;
+  right: 0;
+  background: var(--navy);
+  z-index: 99;
+  padding: 1.5rem 5%;
+  flex-direction: column;
+  gap: 0;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  color: rgba(255,255,255,0.85);
+  font-size: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: color 0.2s;
+}
+.mobile-menu a:last-child {
+  border-bottom: none;
+  color: var(--gold);
+  font-weight: 500;
+  padding-top: 1rem;
+}
+.mobile-menu a:hover { color: var(--gold); }
+
+/* =============================================
+   HERO
+   ============================================= */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--navy);
+  overflow: hidden;
+  padding: 0;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(160deg, rgba(13,31,60,0.94) 0%, rgba(13,31,60,0.72) 50%, rgba(13,31,60,0.88) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect width='80' height='80' fill='%230d1f3c'/%3E%3Ccircle cx='40' cy='40' r='32' fill='none' stroke='%23c9a84c' stroke-width='0.3' opacity='0.18'/%3E%3Cline x1='40' y1='0' x2='40' y2='80' stroke='%23c9a84c' stroke-width='0.2' opacity='0.12'/%3E%3Cline x1='0' y1='40' x2='80' y2='40' stroke='%23c9a84c' stroke-width='0.2' opacity='0.12'/%3E%3C/svg%3E");
+}
+
+/* Decorative arch */
+.hero-arch {
+  position: absolute;
+  right: -3%;
+  bottom: 0;
+  width: 52%;
+  height: 100%;
+  opacity: 0.06;
+  pointer-events: none;
+}
+.hero-arch svg { width: 100%; height: 100%; }
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 8rem 5% 4rem;
+  max-width: 720px;
+  animation: fadeUp 1s ease both;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.75rem;
+}
+.hero-tag-line {
+  width: 44px;
+  height: 1px;
+  background: var(--gold);
+}
+.hero-tag-text {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 400;
+}
+
+h1 { margin-bottom: 1.25rem; }
+
+.hero-sub {
+  font-size: 1.08rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  max-width: 500px;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Scroll indicator */
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.35);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.scroll-line {
+  width: 1px;
+  height: 44px;
+  background: linear-gradient(to bottom, rgba(201,168,76,0.7), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+/* =============================================
+   SERVICE TIMES BAND
+   ============================================= */
+.times-band {
+  background: var(--gold);
+  padding: 1.25rem 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.time-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.time-icon {
+  width: 34px;
+  height: 34px;
+  background: rgba(13,31,60,0.14);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.time-icon svg { width: 17px; height: 17px; fill: var(--navy); }
+.time-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(13,31,60,0.6);
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+.time-value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--navy);
+}
+.time-divider {
+  width: 1px;
+  height: 34px;
+  background: rgba(13,31,60,0.18);
+}
+
+/* =============================================
+   SHARED SECTION STYLES
+   ============================================= */
+section { padding: 6rem 5%; }
+
+/* =============================================
+   WELCOME / ABOUT
+   ============================================= */
+.welcome {
+  background: var(--cream);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.welcome-pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.pillar {
+  background: var(--white);
+  border-radius: 4px;
+  padding: 1.25rem;
+  border-left: 3px solid var(--gold);
+}
+.pillar-icon { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.pillar-title { font-size: 0.87rem; font-weight: 500; color: var(--navy); margin-bottom: 0.3rem; }
+.pillar-text  { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+/* Visual column */
+.welcome-visual { position: relative; }
+
+.welcome-frame {
+  background: var(--navy);
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.frame-quote {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 3rem;
+}
+.frame-quote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.55rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.65;
+  max-width: 280px;
+  margin: 0 auto;
+}
+.frame-quote-line {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  margin: 1.5rem auto 0.75rem;
+}
+.frame-quote-attr {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.frame-cross-bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.06;
+}
+.frame-cross-bg svg { width: 160px; height: 160px; fill: var(--gold); }
+
+.stat-card {
+  position: absolute;
+  bottom: -2rem;
+  right: -2rem;
+  background: var(--white);
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+  min-width: 160px;
+}
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--navy);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* =============================================
+   WHAT'S ON
+   ============================================= */
+.whatson { background: var(--white); }
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.event-card {
+  background: var(--cream);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.25s;
+}
+.event-card:hover { transform: translateY(-5px); }
+
+.event-header {
+  background: var(--navy);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.event-day {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1;
+}
+.event-month {
+  font-size: 0.63rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 400;
+  margin-top: 2px;
+}
+.event-badge {
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 0.63rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 2px;
+  font-weight: 500;
+}
+
+.event-body { padding: 1.25rem 1.5rem; }
+.event-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+.event-meta {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.event-dot {
+  width: 4px;
+  height: 4px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.event-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.65; }
+
+/* =============================================
+   SERMONS
+   ============================================= */
+.sermons {
+  background: var(--navy);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.sermons-grid-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image:
+    repeating-linear-gradient(0deg, var(--gold), var(--gold) 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(90deg, var(--gold), var(--gold) 1px, transparent 1px, transparent 60px);
+}
+.sermons-inner { position: relative; z-index: 1; }
+.sermons .tag-text { color: var(--gold-light); }
+.sermons h2 { color: var(--white); }
+.sermons .section-lead { color: rgba(255,255,255,0.58); }
+
+.sermon-latest {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(201,168,76,0.22);
+  border-radius: 4px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+}
+.sermon-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+.sermon-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+.sermon-speaker { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+.sermon-speaker strong { color: rgba(255,255,255,0.82); font-weight: 400; }
+
+.play-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: background 0.2s;
+  background: none;
+}
+.play-btn:hover { background: var(--gold); }
+.play-btn:hover svg { fill: var(--navy); }
+.play-btn svg { width: 22px; height: 22px; fill: var(--gold); margin-left: 3px; }
+
+.sermons-archive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+}
+.sermon-item {
+  background: rgba(255,255,255,0.04);
+  border-radius: 4px;
+  padding: 1.25rem;
+  border: 1px solid rgba(255,255,255,0.07);
+  transition: border-color 0.2s;
+  cursor: pointer;
+}
+.sermon-item:hover { border-color: rgba(201,168,76,0.4); }
+.sermon-series {
+  font-size: 0.63rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.sermon-item-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+.sermon-item-meta { font-size: 0.74rem; color: rgba(255,255,255,0.38); }
+.sermon-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed rgba(201,168,76,0.3) !important;
+}
+.sermon-more span {
+  font-size: 0.82rem;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+}
+
+/* =============================================
+   LEADERSHIP / ABOUT
+   ============================================= */
+.leadership {
+  background: var(--stone);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.pastor-card {
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.pastor-img {
+  background: var(--navy);
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.pastor-monogram {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  font-weight: 300;
+  color: rgba(201,168,76,0.22);
+  position: relative;
+  z-index: 1;
+}
+.pastor-img-fade {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 60px;
+  background: linear-gradient(to top, rgba(13,31,60,0.6), transparent);
+}
+.pastor-info { padding: 1.5rem; }
+.pastor-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+}
+.pastor-role {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.pastor-bio { font-size: 0.85rem; color: var(--muted); line-height: 1.8; }
+
+.pastor-stats {
+  margin-top: 1rem;
+  background: var(--white);
+  border-radius: 4px;
+  padding: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.pstat {
+  text-align: center;
+  padding: 0.75rem;
+  background: var(--stone);
+  border-radius: 4px;
+}
+.pstat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--navy);
+  line-height: 1;
+}
+.pstat-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* Values list */
+.about-values { margin-top: 1.5rem; }
+.value-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.value-item:last-child { border-bottom: none; }
+.value-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--gold);
+  flex-shrink: 0;
+  width: 32px;
+  line-height: 1;
+}
+.value-content h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+}
+.value-content p { font-size: 0.82rem; color: var(--muted); line-height: 1.65; }
+
+/* =============================================
+   COMMUNITY / GET INVOLVED
+   ============================================= */
+.community { background: var(--white); }
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.community-card {
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  min-height: 220px;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+  transition: transform 0.25s;
+}
+.community-card:hover { transform: scale(1.02); }
+.community-card.wide { grid-column: span 2; }
+
+.cc-icon-bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.13;
+}
+.cc-icon-bg svg { width: 80px; height: 80px; fill: var(--gold); }
+.cc-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13,31,60,0.92) 0%, transparent 65%);
+}
+.cc-label {
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem;
+  color: var(--white);
+}
+.cc-label h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-bottom: 0.3rem;
+  color: var(--white);
+}
+.cc-label p { font-size: 0.78rem; color: rgba(255,255,255,0.6); }
+
+/* =============================================
+   VISIT US
+   ============================================= */
+.visit {
+  background: var(--cream);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.map-placeholder {
+  background: var(--navy);
+  border-radius: 4px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+.map-grid-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  background-image:
+    repeating-linear-gradient(0deg, var(--gold), var(--gold) 1px, transparent 1px, transparent 40px),
+    repeating-linear-gradient(90deg, var(--gold), var(--gold) 1px, transparent 1px, transparent 40px);
+}
+.map-pin { position: relative; z-index: 1; }
+.map-pin svg { width: 52px; height: 52px; fill: var(--gold); }
+.map-address {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.map-address p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+  line-height: 1.9;
+}
+.map-cta {
+  position: relative;
+  z-index: 1;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 10px 24px;
+  border-radius: 2px;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.map-cta:hover { background: var(--gold-light); }
+
+/* Info items */
+.info-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+.info-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.info-icon svg { width: 18px; height: 18px; fill: var(--gold); }
+.info-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+.info-value {
+  font-size: 0.95rem;
+  color: var(--navy);
+  line-height: 1.55;
+}
+
+/* FAQ accordion */
+.faq { margin-top: 2rem; }
+.faq-item {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 1rem 0;
+  cursor: pointer;
+}
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--navy);
+  gap: 1rem;
+}
+.faq-q svg {
+  width: 16px; height: 16px;
+  fill: var(--gold);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.faq-a {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.75;
+  padding-top: 0.75rem;
+  display: none;
+}
+.faq-item.open .faq-a { display: block; }
+.faq-item.open .faq-q svg { transform: rotate(45deg); }
+
+/* =============================================
+   NEWSLETTER
+   ============================================= */
+.newsletter {
+  background: var(--navy);
+  padding: 6rem 5%;
+  text-align: center;
+}
+.newsletter h2 { color: var(--white); }
+.newsletter .section-lead {
+  margin: 0 auto 2rem;
+  color: rgba(255,255,255,0.58);
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 460px;
+  margin: 0 auto;
+}
+.newsletter-form input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: var(--white);
+  font-size: 0.9rem;
+  border-radius: 2px 0 0 2px;
+  outline: none;
+  font-family: 'DM Sans', sans-serif;
+  transition: border-color 0.2s;
+}
+.newsletter-form input::placeholder { color: rgba(255,255,255,0.32); }
+.newsletter-form input:focus { border-color: rgba(201,168,76,0.5); }
+.newsletter-form button {
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  padding: 14px 24px;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 0 2px 2px 0;
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.2s;
+}
+.newsletter-form button:hover { background: var(--gold-light); }
+
+/* =============================================
+   SOCIAL STRIP
+   ============================================= */
+.social-strip {
+  background: var(--stone);
+  padding: 3.5rem 5%;
+  text-align: center;
+}
+.social-strip h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+.social-strip p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1.75rem;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.social-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
+}
+.social-icon:hover { background: var(--navy); border-color: var(--navy); }
+.social-icon:hover svg,
+.social-icon:hover svg path,
+.social-icon:hover svg line,
+.social-icon:hover svg rect,
+.social-icon:hover svg circle { stroke: var(--white); fill: var(--white); }
+.social-icon svg {
+  width: 20px; height: 20px;
+  fill: var(--navy);
+  transition: fill 0.2s;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+  background: var(--navy);
+  padding: 4.5rem 5% 2rem;
+  color: rgba(255,255,255,0.6);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand .nav-name {
+  margin-top: 1rem;
+  color: var(--white);
+}
+.footer-brand p {
+  font-size: 0.82rem;
+  line-height: 1.8;
+  margin-top: 0.75rem;
+  max-width: 270px;
+  color: rgba(255,255,255,0.52);
+}
+
+.footer-col h4 {
+  font-size: 0.67rem;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.1rem;
+  font-weight: 400;
+}
+.footer-col a,
+.footer-col p {
+  display: block;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 0.55rem;
+  transition: color 0.2s;
+  line-height: 1.6;
+}
+.footer-col a:hover { color: var(--gold-light); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.74rem;
+  color: rgba(255,255,255,0.28);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* =============================================
+   ANIMATIONS
+   ============================================= */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.35; }
+  50%       { opacity: 1; }
+}
+
+/* =============================================
+   RESPONSIVE — TABLET (≤ 960px)
+   ============================================= */
+@media (max-width: 960px) {
+  .nav-links, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+
+  .welcome,
+  .leadership,
+  .visit { grid-template-columns: 1fr; }
+
+  .stat-card { bottom: -1rem; right: 0.5rem; }
+
+  .community-grid { grid-template-columns: 1fr 1fr; }
+  .community-card.wide { grid-column: span 2; }
+
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+  .times-band { gap: 1.5rem; }
+  .time-divider { display: none; }
+}
+
+/* =============================================
+   RESPONSIVE — MOBILE (≤ 600px)
+   ============================================= */
+@media (max-width: 600px) {
+  section { padding: 4rem 5%; }
+
+  h1 { font-size: 2.5rem; }
+
+  .hero-btns { flex-direction: column; align-items: flex-start; }
+  .btn-primary, .btn-outline { text-align: center; width: 100%; max-width: 280px; }
+
+  .welcome-pillars { grid-template-columns: 1fr; }
+  .welcome-frame { aspect-ratio: 3 / 2; }
+
+  .community-grid { grid-template-columns: 1fr; }
+  .community-card.wide { grid-column: span 1; }
+
+  .sermon-latest { grid-template-columns: 1fr; gap: 1rem; }
+
+  .newsletter-form { flex-direction: column; }
+  .newsletter-form input  { border-radius: 2px; }
+  .newsletter-form button { border-radius: 2px; }
+
+  .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+
+  .times-band { flex-direction: column; gap: 1rem; align-items: flex-start; padding: 1.25rem 5%; }
+
+  .events-grid { grid-template-columns: 1fr; }
+  .sermons-archive { grid-template-columns: 1fr; }
+
+  .pastor-stats { grid-template-columns: 1fr 1fr; }
+
+  .hero-scroll { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav id="top">
+  <a href="#top" class="nav-logo" aria-label="HCF Home">
+    <div class="nav-cross"></div>
+    <div class="nav-name">
+      Hammersmith Christian Fellowship
+      <span>West London · Est. 1978</span>
+    </div>
+  </a>
+
+  <ul class="nav-links" role="navigation" aria-label="Main navigation">
+    <li><a href="#about">About</a></li>
+    <li><a href="#whatson">What's On</a></li>
+    <li><a href="#sermons">Sermons</a></li>
+    <li><a href="#community">Community</a></li>
+    <li><a href="#visit">Visit Us</a></li>
+  </ul>
+
+  <a href="#visit" class="nav-cta">Plan a Visit</a>
+
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" id="hamburgerBtn">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile dropdown -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#about"      onclick="closeMobile()">About Us</a>
+  <a href="#whatson"    onclick="closeMobile()">What's On</a>
+  <a href="#sermons"    onclick="closeMobile()">Sermons</a>
+  <a href="#community"  onclick="closeMobile()">Community</a>
+  <a href="#visit"      onclick="closeMobile()">Visit Us</a>
+  <a href="#visit"      onclick="closeMobile()">Plan a Visit →</a>
+</div>
+
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" aria-label="Welcome">
+  <div class="hero-bg"></div>
+
+  <!-- Decorative arch -->
+  <div class="hero-arch" aria-hidden="true">
+    <svg viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100,800 L100,300 Q300,0 500,300 L500,800" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
+      <path d="M150,800 L150,320 Q300,60 450,320 L450,800" stroke="#c9a84c" stroke-width="0.8" fill="none"/>
+      <line x1="300" y1="0" x2="300" y2="800" stroke="#c9a84c" stroke-width="0.5"/>
+      <line x1="200" y1="410" x2="400" y2="410" stroke="#c9a84c" stroke-width="0.5"/>
+    </svg>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span class="hero-tag-line"></span>
+      <span class="hero-tag-text">A Christ-centred community in West London</span>
+    </div>
+
+    <h1>A Warm<br>Welcome<br><em>in Hammersmith</em></h1>
+
+    <p class="hero-sub">
+      We're a friendly, Bible-believing church family gathering every Sunday
+      in the heart of Hammersmith. Whether you're exploring faith or coming
+      home — you belong here.
+    </p>
+
+    <div class="hero-btns">
+      <a href="#visit"   class="btn-primary">Plan Your First Visit</a>
+      <a href="#whatson" class="btn-outline">See What's On</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SERVICE TIMES BAND
+     ============================================================ -->
+<div class="times-band" aria-label="Service times">
+  <div class="time-item">
+    <div class="time-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 1 0 22 12 10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67Z"/></svg>
+    </div>
+    <div>
+      <div class="time-label">Sunday Morning</div>
+      <div class="time-value">10:30 am — All welcome</div>
+    </div>
+  </div>
+  <div class="time-divider" aria-hidden="true"></div>
+  <div class="time-item">
+    <div class="time-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M17 12h-5V7h-2v7h7v-2M12 2A10 10 0 1 0 22 12 10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8Z"/></svg>
+    </div>
+    <div>
+      <div class="time-label">Wednesday Prayer</div>
+      <div class="time-value">7:30 pm — Midweek fellowship</div>
+    </div>
+  </div>
+  <div class="time-divider" aria-hidden="true"></div>
+  <div class="time-item">
+    <div class="time-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M12 2L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z"/></svg>
+    </div>
+    <div>
+      <div class="time-label">Location</div>
+      <div class="time-value">Ravenscourt Rd, W6 0UJ</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     WELCOME / ABOUT
+     ============================================================ -->
+<section class="welcome" id="about">
+
+  <!-- Text column -->
+  <div>
+    <div class="section-tag">
+      <span class="tag-line"></span>
+      <span class="tag-text">Who We Are</span>
+    </div>
+    <h2>A community <em>rooted in faith,</em> open to all</h2>
+    <p class="section-lead">
+      Founded in 1978, Hammersmith Christian Fellowship has served the local community for
+      over four decades. We're part of the OBU, led by Pastor Keith Barry, and passionate
+      about making faith accessible and real in everyday life.
+    </p>
+    <div class="welcome-pillars">
+      <div class="pillar">
+        <div class="pillar-icon">✝</div>
+        <div class="pillar-title">Word-centred</div>
+        <div class="pillar-text">Biblical teaching at the heart of all we do</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🤝</div>
+        <div class="pillar-title">Community-focused</div>
+        <div class="pillar-text">Serving Hammersmith and the wider borough</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🏠</div>
+        <div class="pillar-title">Family-friendly</div>
+        <div class="pillar-text">Groups and activities for every stage of life</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🌍</div>
+        <div class="pillar-title">Globally connected</div>
+        <div class="pillar-text">Supporting missions locally and worldwide</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visual column -->
+  <div class="welcome-visual">
+    <div class="welcome-frame">
+      <div class="frame-cross-bg" aria-hidden="true">
+        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <rect x="52" y="10" width="16" height="100" rx="2"/>
+          <rect x="10" y="42" width="100" height="16" rx="2"/>
+        </svg>
+      </div>
+      <div class="frame-quote">
+        <p>"Here to serve God, each other, and our community in Hammersmith"</p>
+        <div class="frame-quote-line"></div>
+        <div class="frame-quote-attr">Pastor Keith Barry</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">40+</div>
+      <div class="stat-label">Years in Hammersmith</div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ============================================================
+     WHAT'S ON
+     ============================================================ -->
+<section class="whatson" id="whatson">
+  <div class="section-tag">
+    <span class="tag-line"></span>
+    <span class="tag-text">Events &amp; Services</span>
+  </div>
+  <h2>What's <em>on this month</em></h2>
+  <p class="section-lead">
+    From Sunday worship to midweek groups, there's always something happening at HCF.
+    All are welcome at every event.
+  </p>
+
+  <div class="events-grid">
+
+    <article class="event-card">
+      <div class="event-header">
+        <div><div class="event-day">6</div><div class="event-month">April</div></div>
+        <span class="event-badge">Weekly</span>
+      </div>
+      <div class="event-body">
+        <h3 class="event-title">Sunday Morning Worship</h3>
+        <div class="event-meta"><div class="event-dot"></div>10:30 am · Main Auditorium</div>
+        <p class="event-desc">Our weekly gathering for worship, prayer, and expository preaching. Children's groups run simultaneously for ages 0–11.</p>
+      </div>
+    </article>
+
+    <article class="event-card">
+      <div class="event-header">
+        <div><div class="event-day">9</div><div class="event-month">April</div></div>
+        <span class="event-badge">Weekly</span>
+      </div>
+      <div class="event-body">
+        <h3 class="event-title">Midweek Prayer &amp; Fellowship</h3>
+        <div class="event-meta"><div class="event-dot"></div>7:30 pm · Fellowship Hall</div>
+        <p class="event-desc">An evening of prayer, Bible study, and community. A smaller, more intimate gathering — a great place to ask your questions.</p>
+      </div>
+    </article>
+
+    <article class="event-card">
+      <div class="event-header">
+        <div><div class="event-day">20</div><div class="event-month">April</div></div>
+        <span class="event-badge">Special</span>
+      </div>
+      <div class="event-body">
+        <h3 class="event-title">Community Easter Lunch</h3>
+        <div class="event-meta"><div class="event-dot"></div>12:30 pm · Church Hall</div>
+        <p class="event-desc">A free shared lunch for the whole neighbourhood. Everyone is welcome — bring yourself, bring a friend or neighbour.</p>
+      </div>
+    </article>
+
+    <article class="event-card">
+      <div class="event-header">
+        <div><div class="event-day">27</div><div class="event-month">April</div></div>
+        <span class="event-badge">Monthly</span>
+      </div>
+      <div class="event-body">
+        <h3 class="event-title">Alpha Course — Session 4</h3>
+        <div class="event-meta"><div class="event-dot"></div>7:00 pm · Lounge Room</div>
+        <p class="event-desc">Our Step by Step course exploring the big questions of life and faith. New participants welcome at any point.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SERMONS
+     ============================================================ -->
+<section class="sermons" id="sermons">
+  <div class="sermons-grid-bg" aria-hidden="true"></div>
+  <div class="sermons-inner">
+
+    <div class="section-tag">
+      <span class="tag-line"></span>
+      <span class="tag-text">Teaching</span>
+    </div>
+    <h2>Listen to our <em>latest sermons</em></h2>
+    <p class="section-lead">
+      Missed a Sunday? Every message is available to watch or listen to. We're building a
+      fully searchable archive for the whole congregation.
+    </p>
+
+    <!-- Featured sermon -->
+    <div class="sermon-latest">
+      <div>
+        <div class="sermon-label">Latest Message · 30 March 2025</div>
+        <div class="sermon-title">"The God Who Draws Near"</div>
+        <div class="sermon-speaker">Preached by <strong>Pastor Keith Barry</strong> · Series: The Presence of God</div>
+      </div>
+      <button class="play-btn" aria-label="Play sermon" onclick="alert('Embed your YouTube or podcast link here.')">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7Z"/></svg>
+      </button>
+    </div>
+
+    <!-- Archive grid -->
+    <div class="sermons-archive">
+
+      <div class="sermon-item" tabindex="0">
+        <div class="sermon-series">The Presence of God</div>
+        <div class="sermon-item-title">"When Silence Feels Like Absence"</div>
+        <div class="sermon-item-meta">23 Mar 2025 · Keith Barry</div>
+      </div>
+
+      <div class="sermon-item" tabindex="0">
+        <div class="sermon-series">The Presence of God</div>
+        <div class="sermon-item-title">"Burning Bushes in Ordinary Days"</div>
+        <div class="sermon-item-meta">16 Mar 2025 · Keith Barry</div>
+      </div>
+
+      <div class="sermon-item" tabindex="0">
+        <div class="sermon-series">The Presence of God</div>
+        <div class="sermon-item-title">"The Tabernacle and the Heart"</div>
+        <div class="sermon-item-meta">9 Mar 2025 · Keith Barry</div>
+      </div>
+
+      <div class="sermon-item sermon-more" tabindex="0" onclick="alert('Link to full sermon archive / YouTube channel')">
+        <span>View full archive →</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     LEADERSHIP
+     ============================================================ -->
+<section class="leadership" id="leadership">
+
+  <!-- Left: values + intro -->
+  <div>
+    <div class="section-tag">
+      <span class="tag-line"></span>
+      <span class="tag-text">Our Leadership</span>
+    </div>
+    <h2>Meet the <em>people behind</em> HCF</h2>
+    <p class="section-lead">
+      Our leadership team is committed to serving the congregation and the wider Hammersmith
+      community with humility and care.
+    </p>
+
+    <div class="about-values">
+      <div class="value-item">
+        <div class="value-num">01</div>
+        <div class="value-content">
+          <h3>Scripture</h3>
+          <p>We believe the Bible is the inspired Word of God — our guide for life, faith, and community.</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-num">02</div>
+        <div class="value-content">
+          <h3>Community</h3>
+          <p>We exist to serve Hammersmith — in practical ways, in prayer, and in relationship.</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-num">03</div>
+        <div class="value-content">
+          <h3>Belonging</h3>
+          <p>Everyone is welcome — regardless of background, questions, or where they are in life.</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-num">04</div>
+        <div class="value-content">
+          <h3>Generosity</h3>
+          <p>We give our time, resources, and hall space freely to bless the local area.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: pastor card -->
+  <div>
+    <div class="pastor-card">
+      <div class="pastor-img">
+        <!-- Replace the monogram div with an <img> tag when you have a photo:
+             <img src="images/pastor-keith.jpg" alt="Pastor Keith Barry" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;"> -->
+        <div class="pastor-monogram" aria-hidden="true">KB</div>
+        <div class="pastor-img-fade" aria-hidden="true"></div>
+      </div>
+      <div class="pastor-info">
+        <div class="pastor-name">Pastor Keith Barry</div>
+        <div class="pastor-role">Senior Pastor · Hammersmith Christian Fellowship</div>
+        <p class="pastor-bio">
+          Keith has served as Senior Pastor of HCF for many years, bringing warm, expository
+          preaching and a deep love for the local community. Under his leadership, the fellowship
+          continues to grow in faith, generosity, and outreach across West London.
+        </p>
+      </div>
+    </div>
+
+    <div class="pastor-stats">
+      <div class="pstat">
+        <div class="pstat-num">3</div>
+        <div class="pstat-label">Elders</div>
+      </div>
+      <div class="pstat">
+        <div class="pstat-num">8</div>
+        <div class="pstat-label">Deacons</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ============================================================
+     COMMUNITY / GET INVOLVED
+     ============================================================ -->
+<section class="community" id="community">
+  <div class="section-tag">
+    <span class="tag-line"></span>
+    <span class="tag-text">Get Involved</span>
+  </div>
+  <h2>Life at <em>HCF</em></h2>
+  <p class="section-lead">
+    Faith isn't just for Sundays. Find your place in our thriving community groups, serving
+    teams, and outreach programmes.
+  </p>
+
+  <div class="community-grid">
+
+    <div class="community-card wide" style="background:#0d2a4a;">
+      <div class="cc-icon-bg" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3m-8 0c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5C15 14.17 10.33 13 8 13m8 0c-.29 0-.62.02-.97.05C16.19 13.89 17 15.02 17 16.5V19h6v-2.5C23 14.17 18.33 13 16 13Z"/></svg>
+      </div>
+      <div class="cc-overlay"></div>
+      <div class="cc-label">
+        <h3>Small Groups</h3>
+        <p>Weekly home groups across Hammersmith &amp; Fulham</p>
+      </div>
+    </div>
+
+    <div class="community-card" style="background:#1a3a2a;">
+      <div class="cc-icon-bg" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z"/></svg>
+      </div>
+      <div class="cc-overlay"></div>
+      <div class="cc-label">
+        <h3>Youth &amp; Children</h3>
+        <p>Sunday groups for ages 0–18</p>
+      </div>
+    </div>
+
+    <div class="community-card" style="background:#2a1a10;">
+      <div class="cc-icon-bg" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5Z"/></svg>
+      </div>
+      <div class="cc-overlay"></div>
+      <div class="cc-label">
+        <h3>Hall Hire</h3>
+        <p>Affordable space for community events</p>
+      </div>
+    </div>
+
+    <div class="community-card" style="background:#1a102a;">
+      <div class="cc-icon-bg" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2Z"/></svg>
+      </div>
+      <div class="cc-overlay"></div>
+      <div class="cc-label">
+        <h3>Prayer &amp; Pastoral</h3>
+        <p>Confidential support &amp; prayer ministry</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     VISIT US
+     ============================================================ -->
+<section class="visit" id="visit">
+
+  <!-- Map placeholder -->
+  <div>
+    <div class="map-placeholder">
+      <div class="map-grid-bg" aria-hidden="true"></div>
+      <div class="map-pin" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5Z"/></svg>
+      </div>
+      <div class="map-address">
+        <p>
+          Hammersmith Christian Fellowship<br>
+          Ravenscourt Road<br>
+          London W6 0UJ
+        </p>
+      </div>
+      <!--
+        TIP: Replace the map placeholder with a real Google Maps embed:
+        <iframe
+          src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE"
+          width="100%" height="380" style="border:0;border-radius:4px;"
+          allowfullscreen loading="lazy">
+        </iframe>
+      -->
+      <a href="https://maps.google.com/?q=Ravenscourt+Road+London+W6" class="map-cta" target="_blank" rel="noopener">Open in Google Maps</a>
+    </div>
+  </div>
+
+  <!-- Info column -->
+  <div class="visit-info">
+    <div class="section-tag">
+      <span class="tag-line"></span>
+      <span class="tag-text">Plan a Visit</span>
+    </div>
+    <h2>We'd love to <em>welcome you</em></h2>
+    <p class="section-lead">
+      Visiting a church for the first time can feel daunting. Here's everything you need
+      to know before you arrive.
+    </p>
+
+    <div class="info-item">
+      <div class="info-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 1 0 22 12 10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67Z"/></svg>
+      </div>
+      <div>
+        <div class="info-label">Service Times</div>
+        <div class="info-value">Sunday 10:30 am · Wednesday 7:30 pm</div>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="info-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2Z"/></svg>
+      </div>
+      <div>
+        <div class="info-label">Contact</div>
+        <div class="info-value">
+          <a href="mailto:info@hcf-baptist.co.uk" style="color:var(--navy)">info@hcf-baptist.co.uk</a><br>
+          020 8748 XXXX
+        </div>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="info-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5Z"/></svg>
+      </div>
+      <div>
+        <div class="info-label">Nearest Tube</div>
+        <div class="info-value">
+          Ravenscourt Park (District line, 3 min walk)<br>
+          Stamford Brook (5 min walk)
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ accordion -->
+    <div class="faq" role="list">
+
+      <div class="faq-item" role="listitem" onclick="toggleFaq(this)" tabindex="0" onkeydown="if(event.key==='Enter')toggleFaq(this)">
+        <div class="faq-q">
+          What should I wear?
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z"/></svg>
+        </div>
+        <div class="faq-a">Come as you are — genuinely. You'll see everything from smart casual to jeans. We care far more about you being there than what you're wearing.</div>
+      </div>
+
+      <div class="faq-item" role="listitem" onclick="toggleFaq(this)" tabindex="0" onkeydown="if(event.key==='Enter')toggleFaq(this)">
+        <div class="faq-q">
+          Is there parking nearby?
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z"/></svg>
+        </div>
+        <div class="faq-a">Street parking is available on surrounding roads on Sundays. Ravenscourt Park station is a 3-minute walk, and several bus routes stop nearby.</div>
+      </div>
+
+      <div class="faq-item" role="listitem" onclick="toggleFaq(this)" tabindex="0" onkeydown="if(event.key==='Enter')toggleFaq(this)">
+        <div class="faq-q">
+          What about my children?
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z"/></svg>
+        </div>
+        <div class="faq-a">Children are very welcome! We run age-appropriate groups during the Sunday service for ages 0–11 (crèche, Explorers, and Pathfinders), so children and parents can both engage fully.</div>
+      </div>
+
+      <div class="faq-item" role="listitem" onclick="toggleFaq(this)" tabindex="0" onkeydown="if(event.key==='Enter')toggleFaq(this)">
+        <div class="faq-q">
+          Do I need to book in advance?
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z"/></svg>
+        </div>
+        <div class="faq-a">No booking needed for regular services — just turn up! For special events like the Easter Lunch, we may ask you to register so we can plan catering.</div>
+      </div>
+
+    </div><!-- /faq -->
+  </div><!-- /visit-info -->
+
+</section>
+
+
+<!-- ============================================================
+     NEWSLETTER
+     ============================================================ -->
+<section class="newsletter" aria-label="Newsletter signup">
+  <div class="section-tag" style="justify-content:center;">
+    <span class="tag-line"></span>
+    <span class="tag-text" style="color:var(--gold-light);">Stay Connected</span>
+  </div>
+  <h2>Never miss a thing at <em>HCF</em></h2>
+  <p class="section-lead">
+    Monthly news, upcoming events, and encouragement — straight to your inbox.
+    Unsubscribe anytime.
+  </p>
+  <form class="newsletter-form" onsubmit="handleNewsletter(event)" novalidate>
+    <input type="email" placeholder="Your email address" aria-label="Email address" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+
+<!-- ============================================================
+     SOCIAL STRIP
+     ============================================================ -->
+<div class="social-strip">
+  <h3>Follow us online</h3>
+  <p>Keep up with HCF on social media for weekly updates, photos, and encouragement</p>
+  <div class="social-icons" role="list" aria-label="Social media links">
+
+    <!-- Facebook -->
+    <a href="https://facebook.com/" class="social-icon" target="_blank" rel="noopener" aria-label="Facebook" role="listitem">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/>
+      </svg>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://youtube.com/" class="social-icon" target="_blank" rel="noopener" aria-label="YouTube" role="listitem">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-2C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-2 2A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-2A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58ZM9.75 15.02V8.98L15.5 12Z"/>
+      </svg>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://instagram.com/" class="social-icon" target="_blank" rel="noopener" aria-label="Instagram" role="listitem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"/>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+      </svg>
+    </a>
+
+    <!-- Spotify / Podcast -->
+    <a href="#" class="social-icon" target="_blank" rel="noopener" aria-label="Podcast" role="listitem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M8 9.5a8 8 0 0 1 8 0M7 12.5a11 11 0 0 1 10 0M9 15.5a6 6 0 0 1 6 0" stroke-linecap="round"/>
+      </svg>
+    </a>
+
+  </div>
+</div>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="footer-top">
+
+    <!-- Brand column -->
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div class="nav-cross" style="width:22px;height:22px;" aria-hidden="true"></div>
+        <div class="nav-name">
+          Hammersmith Christian Fellowship
+          <span>West London</span>
+        </div>
+      </div>
+      <p>
+        A Christ-centred community serving Hammersmith and beyond.
+        Part of the OBU. Registered charity in England &amp; Wales.
+      </p>
+    </div>
+
+    <!-- Navigate -->
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="#about">About Us</a>
+      <a href="#whatson">What's On</a>
+      <a href="#sermons">Sermons</a>
+      <a href="#community">Get Involved</a>
+      <a href="#visit">Visit Us</a>
+    </div>
+
+    <!-- Resources -->
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="#">Sermon Archive</a>
+      <a href="#">Hall Hire</a>
+      <a href="#">Step by Step Course</a>
+      <a href="#">Newsletter</a>
+      <a href="#">Give Online</a>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Ravenscourt Road</p>
+      <p>London, W6 0UJ</p>
+      <a href="mailto:info@hcf-baptist.co.uk">info@hcf-baptist.co.uk</a>
+      <a href="#">Safeguarding Policy</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+
+  </div><!-- /footer-top -->
+
+  <div class="footer-bottom">
+    <span>© 2025 Hammersmith Christian Fellowship. Registered charity in England &amp; Wales.</span>
+    <span>Website by Boost Media Marketing</span>
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+/* ---- Mobile nav ---- */
+function toggleMenu() {
+  var menu = document.getElementById('mobileMenu');
+  var btn  = document.getElementById('hamburgerBtn');
+  var open = menu.classList.toggle('open');
+  menu.setAttribute('aria-hidden', !open);
+  btn.setAttribute('aria-expanded', open);
+}
+function closeMobile() {
+  var menu = document.getElementById('mobileMenu');
+  menu.classList.remove('open');
+  menu.setAttribute('aria-hidden', 'true');
+  document.getElementById('hamburgerBtn').setAttribute('aria-expanded', 'false');
+}
+
+/* ---- Smooth scroll with nav offset ---- */
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+  anchor.addEventListener('click', function(e) {
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      closeMobile();
+      var offset = document.querySelector('nav').offsetHeight;
+      window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+    }
+  });
+});
+
+/* ---- FAQ accordion ---- */
+function toggleFaq(el) {
+  var wasOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(i) {
+    i.classList.remove('open');
+  });
+  if (!wasOpen) el.classList.add('open');
+}
+
+/* ---- Newsletter form ---- */
+function handleNewsletter(e) {
+  e.preventDefault();
+  var input = e.target.querySelector('input');
+  var btn   = e.target.querySelector('button');
+  if (!input.value || !input.validity.valid) {
+    input.style.borderColor = 'rgba(255,80,80,0.5)';
+    return;
+  }
+  btn.textContent = 'Thank you!';
+  btn.style.background = '#3b6d11';
+  btn.style.color = '#fff';
+  input.value = '';
+  input.disabled = true;
+  btn.disabled = true;
+}
+
+/* ---- Navbar: add shadow on scroll ---- */
+window.addEventListener('scroll', function() {
+  var nav = document.querySelector('nav');
+  if (window.scrollY > 20) {
+    nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.35)';
+  } else {
+    nav.style.boxShadow = 'none';
+  }
+});
+</script>
+
+</body>
+</html>
